@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(117, 168, 66);
+    text-align: center;
+}
+
+.leaf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+}
+
+img {
+    position:relative;
+    image-rendering: pixelated;
+    height: 40vh;
+}
