@@ -26,7 +26,7 @@ export default class LeafAnimation {
             this.leafElements[i].style.transform = `rotate(${this.initLeafRots[i]}deg) translateY(-${this.initLeafSpreadRadius}vh)`;
             this.initLeafRots[i] = this.lerp(this.initLeafRots[i], this.finalLeafRots[i], .05 * this.timer.delta / 20.0)
         }
-        this.initLeafSpreadRadius = this.lerp(this.initLeafSpreadRadius, this.finalLeafSpreadRadius, .05);
+        this.initLeafSpreadRadius = this.lerp(this.initLeafSpreadRadius, this.finalLeafSpreadRadius, .03);
         requestAnimationFrame(()=>{this.update()});
     }
 

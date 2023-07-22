@@ -8,8 +8,8 @@ export default class PedalAnimation {
     constructor(timer) {
         // animation attribs
         this.timer = timer;
-        this.finalLeafRotOffset = 180;
-        this.initLeafSpreadRadius = 5;
+        this.finalLeafRotOffset = 720;
+        this.initLeafSpreadRadius = 0;
         this.finalLeafSpreadRadius = 11.5;
         this.leafElements = document.querySelectorAll('img#pedal');
         this.initLeafRots = new Array(this.leafElements.length).fill(0);
@@ -26,7 +26,7 @@ export default class PedalAnimation {
             this.leafElements[i].style.transform = `rotate(${this.initLeafRots[i]}deg) translateY(-${this.initLeafSpreadRadius}vh)`;
             this.initLeafRots[i] = this.lerp(this.initLeafRots[i], this.finalLeafRots[i], .05 * this.timer.delta / 20.0)
         }
-        this.initLeafSpreadRadius = this.lerp(this.initLeafSpreadRadius, this.finalLeafSpreadRadius, .05);
+        this.initLeafSpreadRadius = this.lerp(this.initLeafSpreadRadius, this.finalLeafSpreadRadius, .03);
         requestAnimationFrame(()=>{this.update()});
     }
 
