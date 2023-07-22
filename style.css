@@ -5,7 +5,7 @@ body {
     text-align: center;
 }
 
-.leaf {
+.center {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -13,8 +13,17 @@ body {
     /* border: 1px solid red; */
 }
 
+
+
 img {
     position:relative;
     image-rendering: pixelated;
+}
+
+img#leaf {
     height: 40vh;
+}
+
+img#pedal {
+    height: 35vh;
 }
